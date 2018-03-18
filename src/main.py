@@ -74,7 +74,7 @@ class GameManager(object):
             elif(disc.type == "White"):    
                 self.canvas.create_oval(center_x - 44, center_y - 44, center_x + 44, center_y + 44, fill="White", outline="Black", tag="disc")
             elif(disc.type == "CanPlace"):    
-                self.canvas.create_oval(center_x - 6, center_y - 6, center_x + 6, center_y + 6, fill="OliveDrab1", outline="OliveDrab1", tag="disc")
+                self.canvas.create_oval(center_x - 5, center_y - 5, center_x + 5, center_y + 5, fill="OliveDrab1", outline="OliveDrab1", tag="disc")
             # 最後に打たれた石の場合、マークを付ける
             if(disc.newest_place):
                 self.canvas.create_oval(center_x - 8, center_y - 8, center_x + 8, center_y + 8, fill="Red", outline="Red", tag="disc")
@@ -123,7 +123,7 @@ class GameManager(object):
         self.draw()
 
         if(self.pass_count < 2):
-            self.root.after(100, self.play)
+            self.root.after(10, self.play)
 
 
 class PlayerObject(object):
@@ -325,7 +325,7 @@ def main():
 
     board = Board() # ボードクラス 
     gameManager = GameManager(root, board, Player1, Player2) # ゲームマネージャークラス
-    root.after(100, gameManager.play)
+    root.after(10, gameManager.play)
 
     root.mainloop()  # メインループ
 
