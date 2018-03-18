@@ -40,7 +40,7 @@ class GameManager(object):
                 self.Board.discs[index].type = "Space"
 
     def click(self, mouse):
-        print(mouse.x, mouse.y)
+        # print(mouse.x, mouse.y)
         index = int(mouse.y / 90 + 1) * 10 + int(mouse.x / 90 + 1)
         self.clicked_board_index = index
 
@@ -70,7 +70,7 @@ class GameManager(object):
             center_x = 45 + int((index-1) % 10) * 90
             center_y = 45 + int((index-10) / 10) * 90
             if(disc.type == "Black"):    
-                self.canvas.create_oval(center_x - 44, center_y - 44, center_x + 44, center_y + 44, fill="Black", outline="Black", tag="disc")
+                self.canvas.create_oval(center_x - 43, center_y - 43, center_x + 43, center_y + 43, fill="Black", outline="Black", tag="disc")
             elif(disc.type == "White"):    
                 self.canvas.create_oval(center_x - 44, center_y - 44, center_x + 44, center_y + 44, fill="White", outline="Black", tag="disc")
             elif(disc.type == "CanPlace"):    
@@ -123,7 +123,7 @@ class GameManager(object):
         self.draw()
 
         if(self.pass_count < 2):
-            self.root.after(100, self.play)        
+            self.root.after(100, self.play)
 
 
 class PlayerObject(object):
