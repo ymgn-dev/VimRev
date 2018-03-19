@@ -10,8 +10,9 @@ class PlayerObject(object):
 
     def placeDisc(self, board, global_turn, b_index,):
 
-        # 着手可能場所を取得
-        list_canplace = board.getCanPlace(self.myTurn)
+        # 自分のターンの時、着手可能場所を取得
+        if(self.myTurn == global_turn):
+            list_canplace = board.getCanPlace(self.myTurn)
 
         # 自分のターンじゃないときは何もしない
         if(self.myTurn != global_turn or b_index is None):
