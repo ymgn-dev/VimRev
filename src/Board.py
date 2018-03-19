@@ -14,26 +14,8 @@ class Board(object):
             d = Disc()
             self.discs.append(d)
 
-        for i in range(0, 10):
-            self.discs[i].type = "Ban"
-            self.discs[i + 90].type = "Ban"
-        for i in range(10, 81, 10):
-            self.discs[i].type = "Ban"
-            self.discs[i + 9].type = "Ban"
-        for i in range(0, 90):
-            if(int(i / 10) == 0 or int(i % 10) == 0 or int(i % 10) == 9):
-                continue
-            else:
-                self.discs[i].type = "Space"
-
-        self.discs[45].type = "Black"
-        self.discs[54].type = "Black"
-        self.discs[44].type = "White"
-        self.discs[55].type = "White"
-        self.discs[34].type = "CanPlace"
-        self.discs[43].type = "CanPlace"
-        self.discs[56].type = "CanPlace"
-        self.discs[65].type = "CanPlace"
+        # Initialize board
+        self.Initialize()
 
     # ボードを初期化
     def Initialize(self, ):
