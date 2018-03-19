@@ -2,6 +2,8 @@
 
 It is simple reversi software.  
 
+![gui](https://github.com/Vimmer-Yamagen/VimRev/blob/images/gui.png)
+
 ## Environment
 
 + Python 3.6.4  
