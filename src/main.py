@@ -43,7 +43,7 @@ def main():
         sys.exit()
 
     root = tk.Tk()  # rootウィンドウを作成
-    root.title("AlphaRe")  # rootウィンドウのタイトルを変える
+    root.title("VimRev")  # rootウィンドウのタイトルを変える
     root.geometry("960x720")  # rootウィンドウの大きさを960x720に
     root.resizable(0, 0)  # 縦、横共に画面サイズの変更を禁止
 
