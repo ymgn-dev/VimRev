@@ -3,7 +3,6 @@
 from Disc import Disc
 
 
-
 class Board(object):
 
     discs = None  # ボード上の石(ディスク)
