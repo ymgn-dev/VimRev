@@ -9,6 +9,8 @@ class PlayerObject(object):
         self.myTurn = myTurn
 
     def placeDisc(self, board, global_turn, b_index,):
+        
+        list_canplace = None
 
         # 自分のターンの時、着手可能場所を取得
         if(self.myTurn == global_turn):
@@ -16,10 +18,6 @@ class PlayerObject(object):
 
         # 自分のターンじゃないときは何もしない
         if(self.myTurn != global_turn or b_index is None):
-            return "None"
-
-        # クリックした場所に着手できないとき
-        if(board.discs[b_index].type != "CanPlace"):
             return "None"
 
         # 着手できる場所が無いときはパス
@@ -31,3 +29,7 @@ class PlayerObject(object):
             board.resetNewDisc()
             board.reverseDisc(self.myTurn, b_index)
             return "Done"
+
+        # クリックした場所に着手できないとき
+        elif(board.discs[b_index].type != "CanPlace"):
+            return "None"
