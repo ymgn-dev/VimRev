@@ -43,7 +43,11 @@ class GameManager(object):
                 self.Board.discs[index].type = "Space"
 
     def click(self, mouse):
-        # print(mouse.x, mouse.y)
+
+        # clicked out of the board
+        if(mouse.x > 720):
+            return
+
         index = int(mouse.y / 90 + 1) * 10 + int(mouse.x / 90 + 1)
         self.clicked_board_index = index
 

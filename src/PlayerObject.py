@@ -18,6 +18,10 @@ class PlayerObject(object):
         if(self.myTurn != global_turn or b_index is None):
             return "None"
 
+        # クリックした場所に着手できないとき
+        if(board.discs[b_index].type != "CanPlace"):
+            return "None"
+
         # 着手できる場所が無いときはパス
         if(len(list_canplace) == 0):
             return "Pass"
