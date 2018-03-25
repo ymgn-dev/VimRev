@@ -18,8 +18,8 @@ In addition, the following commands are prepared.
 > python src/main.py -f ai -p player <-"AI vs Player"(first move is ai)  
 > python src/main.py -f ai -p ai <-"AI vs AI"  
 
---first / -f -> set first move(Player or AI)  
---passive / -p -> set passive move(Player or AI)  
+--first / -f -> set first move(player or ai)  
+--passive / -p -> set passive move(player or ai)  
 
 ## Memo  
 + If you rewrite draw function in GameManager class, you are able to display various information in the right side.  
