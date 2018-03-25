@@ -21,6 +21,7 @@ def main():
 
     # コマンドライン引数の解析
     args = parser.parse_args()
+
     Player1 = Player("Black") if args.first == 'player' else AI("Black")
     Player2 = Player("White") if args.passive == 'player' else AI("White")
 
